@@ -89,8 +89,8 @@ a {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(20rem, 28rem) minmax(18rem, 28rem);
-  gap: 1.3rem;
+  grid-template-columns: minmax(24rem, 35rem) minmax(18rem, 23rem);
+  gap: 1.4rem;
   align-items: center;
   justify-content: center;
 }
@@ -110,7 +110,7 @@ a {
   padding: clamp(2rem, 4vw, 3.5rem);
   background: rgba(255, 250, 243, 0.78);
   backdrop-filter: blur(14px);
-  max-width: 28rem;
+  max-width: 35rem;
 }
 
 .eyebrow {
@@ -150,7 +150,7 @@ h2 {
 }
 
 .hero-text {
-  max-width: 25rem;
+  max-width: 31rem;
 }
 
 .hero-actions,
@@ -225,7 +225,7 @@ h2 {
   padding: 1rem;
   background: linear-gradient(180deg, rgba(28, 29, 33, 0.96), rgba(57, 53, 48, 0.9));
   color: #fff6ed;
-  max-width: 28rem;
+  max-width: 23rem;
 }
 
 .hero-panel-grid {
