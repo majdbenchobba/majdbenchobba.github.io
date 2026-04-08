@@ -153,6 +153,10 @@ h2 {
   max-width: 31rem;
 }
 
+.hero-text-secondary {
+  margin-top: 0.75rem;
+}
+
 .hero-actions,
 .footer-links {
   display: flex;
