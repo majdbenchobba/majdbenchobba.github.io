@@ -89,9 +89,10 @@ a {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.03fr) minmax(19rem, 0.97fr);
+  grid-template-columns: repeat(2, minmax(20rem, 30rem));
   gap: 1.3rem;
   align-items: start;
+  justify-content: center;
 }
 
 .hero-copy,
@@ -294,9 +295,10 @@ h2 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(19rem, 30rem));
   gap: 1rem;
   align-items: start;
+  justify-content: center;
 }
 
 .project-card {
@@ -370,8 +372,9 @@ h2 {
 }
 
 .creative-layout {
-  grid-template-columns: minmax(18rem, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: repeat(2, minmax(19rem, 30rem));
   align-items: start;
+  justify-content: center;
 }
 
 .creative-note,
@@ -397,8 +400,9 @@ h2 {
 }
 
 .about-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(16rem, 1fr));
   align-items: start;
+  justify-content: center;
 }
 
 .footer {
