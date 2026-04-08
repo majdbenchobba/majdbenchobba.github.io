@@ -89,7 +89,7 @@ function renderFilters() {
 
 function createProjectCard(project) {
   const card = document.createElement("article");
-  card.className = `project-card${project.featured ? " is-featured" : ""}`;
+  card.className = "project-card";
 
   const links = [
     `<a class="project-link" href="${project.repoUrl}" target="_blank" rel="noreferrer">Open repo</a>`,
