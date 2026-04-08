@@ -126,6 +126,7 @@ a {
 .biasforge-callout-arrow {
   width: 12.3rem;
   height: auto;
+  transform: scaleX(-1);
   animation: biasforge-sway 3.6s ease-in-out infinite;
 }
 
@@ -140,11 +141,11 @@ a {
 @keyframes biasforge-sway {
   0%,
   100% {
-    transform: translateY(0) rotate(0deg);
+    transform: scaleX(-1) translateY(0) rotate(0deg);
   }
 
   50% {
-    transform: translateY(4px) rotate(1.5deg);
+    transform: scaleX(-1) translateY(4px) rotate(1.5deg);
   }
 }
 
