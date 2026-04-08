@@ -94,37 +94,37 @@ a {
 
 .biasforge-callout {
   position: absolute;
-  top: 2.35rem;
-  right: 7.9rem;
+  top: 1.95rem;
+  right: 5.8rem;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: min(17rem, 28vw);
+  align-items: center;
+  width: min(13.4rem, 22vw);
   color: var(--accent);
-  transform: rotate(-2deg);
+  transform: rotate(2deg);
   transition: transform 180ms ease, color 180ms ease;
 }
 
 .biasforge-callout:hover {
-  transform: rotate(-2deg) translateY(-2px);
+  transform: rotate(2deg) translateY(-2px);
   color: #8f3915;
 }
 
 .biasforge-callout-text {
-  max-width: 12rem;
-  margin-bottom: -0.6rem;
+  max-width: 8.6rem;
+  margin-top: -0.5rem;
   font-family: "Sora", sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.69rem;
   font-weight: 800;
-  line-height: 0.98;
+  line-height: 0.94;
   letter-spacing: -0.03em;
-  text-align: right;
+  text-align: center;
   text-transform: lowercase;
 }
 
 .biasforge-callout-arrow {
-  width: 14.6rem;
+  width: 12.3rem;
   height: auto;
   animation: biasforge-sway 3.6s ease-in-out infinite;
 }
@@ -150,7 +150,7 @@ a {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(24rem, 35rem) minmax(18rem, 23rem);
+  grid-template-columns: minmax(26rem, 38rem) minmax(18rem, 23rem);
   gap: 1.4rem;
   align-items: center;
   justify-content: center;
@@ -171,7 +171,12 @@ a {
   padding: clamp(2rem, 4vw, 3.5rem);
   background: rgba(255, 250, 243, 0.78);
   backdrop-filter: blur(14px);
-  max-width: 35rem;
+  max-width: 38rem;
+}
+
+.hero-copy .eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
 }
 
 .eyebrow {
@@ -445,6 +450,8 @@ h2 {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.9rem;
+  width: 100%;
+  align-self: center;
   justify-content: center;
 }
 
@@ -453,6 +460,7 @@ h2 {
   border-radius: 999px;
   background: var(--accent-soft);
   font-size: 0.82rem;
+  text-align: center;
 }
 
 .project-links {
@@ -461,6 +469,8 @@ h2 {
   gap: 0.75rem;
   margin-top: auto;
   padding-top: 1rem;
+  width: 100%;
+  align-self: center;
   justify-content: center;
 }
 
@@ -527,6 +537,8 @@ h2 {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.9rem;
+  width: 100%;
+  align-self: center;
   justify-content: center;
 }
 
@@ -535,6 +547,7 @@ h2 {
   border-radius: 999px;
   background: var(--accent-soft);
   font-size: 0.82rem;
+  text-align: center;
 }
 
 .venture-links {
@@ -542,11 +555,16 @@ h2 {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1rem;
+  width: 100%;
+  align-self: center;
   justify-content: center;
 }
 
 .venture-note {
   font-size: 0.92rem;
+  max-width: 24rem;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -808,6 +826,12 @@ h2 {
   align-items: center;
   gap: 1rem;
   padding: 0 0 2.2rem;
+}
+
+@media (min-width: 901px) {
+  .hero-copy .eyebrow {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 1180px) {
