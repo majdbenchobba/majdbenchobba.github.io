@@ -11,7 +11,7 @@ const projects = [
     typeLabel: "Creative",
     status: "Live site",
     summary:
-      "A dedicated GitHub Pages portfolio for design and communication work, featuring campaign systems, event posters, quote formats, and downloadable PDF pieces.",
+      "GitHub Pages portfolio for campaign systems, event visuals, and editorial PDF work.",
     tags: ["GitHub Pages", "Portfolio", "Design"],
     repoUrl: "https://github.com/majdbenchobba/design-and-video-portfolio",
     liveUrl: "https://majdbenchobba.github.io/design-and-video-portfolio/",
@@ -23,7 +23,7 @@ const projects = [
     typeLabel: "Code",
     status: "Testnet verified",
     summary:
-      "A testnet-first Binance Futures SMA crossover bot with hardening work around dry runs, reporting, protection logic, and paper-run support.",
+      "Testnet-first Binance Futures bot with dry runs, reporting, protection logic, and paper-run support.",
     tags: ["Python", "Trading", "Automation"],
     repoUrl: "https://github.com/majdbenchobba/binance-futures-bot",
   },
@@ -33,7 +33,7 @@ const projects = [
     typeLabel: "Code",
     status: "Published utility",
     summary:
-      "A small Python scraper for product pages that exports CSV data and summary charts instead of pretending to scrape every site magically.",
+      "Python scraper for product pages with CSV export and simple summary charts.",
     tags: ["Python", "Scraping", "CLI"],
     repoUrl: "https://github.com/majdbenchobba/ai-web-scraper",
   },
@@ -43,7 +43,7 @@ const projects = [
     typeLabel: "Code",
     status: "Published utility",
     summary:
-      "A CLI tool for cleaning and normalizing broker or exchange trade export CSV files into a more consistent format for later analysis.",
+      "CLI tool that normalizes broker and exchange trade CSV exports for later analysis.",
     tags: ["Python", "CSV", "Tooling"],
     repoUrl: "https://github.com/majdbenchobba/trade-export-normalizer",
   },
@@ -53,7 +53,7 @@ const projects = [
     typeLabel: "Code",
     status: "Published utility",
     summary:
-      "A small downloader for saving YouTube or YouTube Music audio as WAV files, with a lightweight workflow instead of a bloated interface.",
+      "Utility for saving YouTube or YouTube Music audio as WAV files.",
     tags: ["Python", "Audio", "Utility"],
     repoUrl: "https://github.com/majdbenchobba/ytmusic-downloader",
   },
@@ -118,8 +118,12 @@ function createProjectCard(project) {
 }
 
 function renderProjects() {
+  const visibleProjects = filteredProjects();
   projectGrid.innerHTML = "";
-  filteredProjects().forEach((project) => {
+  projectGrid.className = "project-grid";
+  projectGrid.classList.add(`count-${visibleProjects.length}`);
+
+  visibleProjects.forEach((project) => {
     projectGrid.appendChild(createProjectCard(project));
   });
 }
