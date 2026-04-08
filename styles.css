@@ -87,6 +87,69 @@ a {
   color: var(--muted);
 }
 
+.topbar-link-biasforge {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(187, 76, 31, 0.08);
+  color: var(--accent);
+}
+
+.biasforge-callout {
+  position: absolute;
+  top: 4.35rem;
+  right: 10rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: min(17rem, 29vw);
+  color: var(--accent);
+  transform: rotate(-6deg);
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.biasforge-callout:hover {
+  transform: rotate(-6deg) translateY(-2px);
+  color: #8f3915;
+}
+
+.biasforge-callout-text {
+  max-width: 11rem;
+  margin-bottom: 0.15rem;
+  font-family: "Sora", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.biasforge-callout-arrow {
+  width: 13.5rem;
+  height: auto;
+  animation: biasforge-sway 3.6s ease-in-out infinite;
+}
+
+.biasforge-callout-arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes biasforge-sway {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(4px) rotate(1.5deg);
+  }
+}
+
 .hero-layout {
   display: grid;
   grid-template-columns: minmax(24rem, 35rem) minmax(18rem, 23rem);
@@ -740,6 +803,12 @@ h2 {
   align-items: center;
   gap: 1rem;
   padding: 0 0 2.2rem;
+}
+
+@media (max-width: 1180px) {
+  .biasforge-callout {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
