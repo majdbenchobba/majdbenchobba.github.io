@@ -130,3 +130,19 @@ function renderProjects() {
 
 renderFilters();
 renderProjects();
+
+const biasforgeNavMenu = document.querySelector(".biasforge-nav-menu");
+
+if (biasforgeNavMenu) {
+  document.addEventListener("click", (event) => {
+    if (!biasforgeNavMenu.contains(event.target)) {
+      biasforgeNavMenu.removeAttribute("open");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      biasforgeNavMenu.removeAttribute("open");
+    }
+  });
+}

@@ -84,72 +84,92 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
   color: var(--muted);
 }
 
-.topbar-link-biasforge {
-  color: var(--accent);
-  font-weight: 700;
+.biasforge-nav-menu {
+  position: relative;
 }
 
-.biasforge-callout {
-  position: absolute;
-  top: 0.55rem;
-  right: 3.45rem;
-  z-index: 2;
-  width: min(14.2rem, 22vw);
+.biasforge-nav-menu[open] {
+  z-index: 5;
+}
+
+.topbar-link-biasforge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--accent);
-  display: grid;
-  justify-items: start;
-  gap: 0;
-  transform: rotate(-3deg);
-  transform-origin: 88% 28%;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.biasforge-nav-trigger {
+  list-style: none;
   transition: transform 180ms ease, color 180ms ease;
 }
 
-.biasforge-callout:hover {
-  transform: translateY(-2px) rotate(-3deg);
+.biasforge-nav-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.biasforge-nav-trigger::marker {
+  content: "";
+}
+
+.biasforge-nav-trigger::after {
+  content: "▾";
+  font-size: 0.74rem;
+  transition: transform 180ms ease;
+}
+
+.biasforge-nav-menu[open] .biasforge-nav-trigger {
   color: #8f3915;
 }
 
-.biasforge-callout-note {
-  display: block;
-  width: 6.65rem;
-  margin-left: 0.25rem;
-  margin-bottom: -0.65rem;
-  font-family: "Sora", sans-serif;
-  font-size: 0.58rem;
-  font-weight: 800;
-  line-height: 0.96;
-  letter-spacing: -0.03em;
-  text-align: center;
-  text-transform: lowercase;
-  transform: rotate(-6deg);
+.biasforge-nav-menu[open] .biasforge-nav-trigger::after {
+  transform: rotate(180deg);
 }
 
-.biasforge-callout-arrow {
-  width: 100%;
-  height: auto;
-  animation: biasforge-sway 3.6s ease-in-out infinite;
+.biasforge-nav-trigger:hover {
+  transform: translateY(-2px);
 }
 
-.biasforge-callout-arrow path {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 4.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.biasforge-nav-pop {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 50%;
+  display: grid;
+  gap: 0.55rem;
+  min-width: 15.5rem;
+  padding: 0.8rem;
+  border: 1px solid rgba(23, 20, 18, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 250, 243, 0.95);
+  box-shadow: 0 20px 55px rgba(39, 28, 18, 0.18);
+  backdrop-filter: blur(16px);
+  transform: translateX(-50%);
 }
 
-@keyframes biasforge-sway {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
+.biasforge-nav-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(23, 20, 18, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  font-weight: 700;
+  color: var(--ink);
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
 
-  50% {
-    transform: translateY(4px) rotate(1.5deg);
-  }
+.biasforge-nav-option:hover {
+  transform: translateY(-2px);
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .hero-layout {
@@ -564,14 +584,6 @@ h2 {
   justify-content: center;
 }
 
-.venture-note {
-  font-size: 0.92rem;
-  max-width: 24rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 .case-page {
   background:
     radial-gradient(circle at top left, rgba(255, 204, 128, 0.2), transparent 28rem),
@@ -838,12 +850,6 @@ h2 {
   }
 }
 
-@media (max-width: 1180px) {
-  .biasforge-callout {
-    display: none;
-  }
-}
-
 @media (max-width: 1024px) {
   .hero-layout,
   .case-hero,
@@ -878,6 +884,12 @@ h2 {
   .case-cta {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .biasforge-nav-pop {
+    left: auto;
+    right: 0;
+    transform: none;
   }
 
   .case-cta-actions {
