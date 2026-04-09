@@ -94,25 +94,29 @@ a {
 
 .biasforge-callout {
   position: absolute;
-  top: 0.45rem;
-  right: 4.05rem;
+  top: 0.55rem;
+  right: 3.45rem;
   z-index: 2;
-  width: min(15.2rem, 24vw);
+  width: min(14.2rem, 22vw);
   color: var(--accent);
-  transform: rotate(0deg);
+  display: grid;
+  justify-items: start;
+  gap: 0;
+  transform: rotate(-3deg);
+  transform-origin: 88% 28%;
   transition: transform 180ms ease, color 180ms ease;
 }
 
 .biasforge-callout:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) rotate(-3deg);
   color: #8f3915;
 }
 
-.biasforge-callout-text {
-  position: absolute;
-  top: 1.55rem;
-  left: -0.2rem;
-  max-width: 6.45rem;
+.biasforge-callout-note {
+  display: block;
+  width: 6.65rem;
+  margin-left: 0.25rem;
+  margin-bottom: -0.65rem;
   font-family: "Sora", sans-serif;
   font-size: 0.58rem;
   font-weight: 800;
@@ -120,11 +124,11 @@ a {
   letter-spacing: -0.03em;
   text-align: center;
   text-transform: lowercase;
-  transform: rotate(-10deg);
+  transform: rotate(-6deg);
 }
 
 .biasforge-callout-arrow {
-  width: 14.65rem;
+  width: 100%;
   height: auto;
   animation: biasforge-sway 3.6s ease-in-out infinite;
 }
