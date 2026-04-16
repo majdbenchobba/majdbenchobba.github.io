@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cynth V.1 | Majd Ben Chobba</title>
+    <meta
+      name="description"
+      content="Cynth V.1: bachelor's thesis analog synthesizer by Majd Ben Chobba, covering a six-module voltage-controlled hardware synth."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css?v=20260416a">
+  </head>
+  <body class="case-page">
+    <div class="grain"></div>
+
+    <header class="hero case-hero-shell">
+      <nav class="topbar">
+        <a class="brand" href="index.html">Majd Ben Chobba</a>
+        <div class="topbar-links">
+          <a href="index.html#current-work">Home</a>
+          <a href="#overview">Overview</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#results">Results</a>
+          <a href="assets/cynth-v1/cynth-v1-thesis-presentation.pdf" target="_blank" rel="noreferrer">Presentation PDF</a>
+        </div>
+      </nav>
+
+      <div class="case-hero" id="top">
+        <section class="case-copy">
+          <p class="eyebrow">Cynth V.1 / Bachelor's thesis / Hardware synth</p>
+          <h1>A six-module analog synthesizer built as a complete thesis project.</h1>
+          <p class="hero-text">
+            Cynth V.1 is my bachelor's thesis project: a voltage-controlled analog synthesizer
+            built around a controller, VCO, VCF, VCA, envelope generator, and power supply.
+          </p>
+          <p class="hero-text hero-text-secondary">
+            The objective was a stable six-waveform instrument with 0-5V control, frequency
+            modulation input, and a 12 dB/octave filter stage.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-dark" href="assets/cynth-v1/cynth-v1-thesis-presentation.pdf" target="_blank" rel="noreferrer">Open presentation PDF</a>
+            <a class="button button-light" href="index.html#current-work">Back to homepage</a>
+          </div>
+        </section>
+
+        <aside class="case-summary">
+          <article class="case-signal">
+            <span class="case-signal-label">Project scope</span>
+            <h3>Analog hardware synth designed and assembled as a full thesis build.</h3>
+          </article>
+          <article class="case-signal">
+            <span class="case-signal-label">Core design</span>
+            <h3>Six waveforms, voltage control, FM input, filter section, VCA, and ADSR shaping.</h3>
+          </article>
+          <article class="case-signal case-signal-accent">
+            <span class="case-signal-label">Timeline</span>
+            <h3>Presented on June 25, 2024 as the completed bachelor's thesis outcome.</h3>
+          </article>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="overview">
+        <div class="section-heading case-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>Built around analog sound, modular structure, and direct control.</h2>
+          <p>
+            The project was positioned as a build-your-own instrument rather than a software
+            simulation. The focus was hardware implementation, signal stability, and a modular
+            structure that could be extended later.
+          </p>
+        </div>
+
+        <div class="case-card-grid">
+          <article class="case-card">
+            <div class="case-card-meta">
+              <span class="case-card-type">Instrument goal</span>
+              <span class="case-card-status">Completed</span>
+            </div>
+            <h3>Six-waveform analog voice</h3>
+            <p>
+              The synthesizer was designed to generate sawtooth, square, pulse, reverse saw,
+              triangle, and sine outputs from the oscillator section.
+            </p>
+            <div class="case-chip-row">
+              <span>Saw</span>
+              <span>Square</span>
+              <span>Triangle</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-card-meta">
+              <span class="case-card-type">Control scheme</span>
+              <span class="case-card-status">0-5V</span>
+            </div>
+            <h3>Voltage-controlled operation</h3>
+            <p>
+              The controller stage provides independent outputs for pitch, gate, and modulation
+              so each module can be driven directly.
+            </p>
+            <div class="case-chip-row">
+              <span>Pitch</span>
+              <span>Gate</span>
+              <span>Mod</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-card-meta">
+              <span class="case-card-type">Signal shaping</span>
+              <span class="case-card-status">12 dB/oct</span>
+            </div>
+            <h3>Filter, amplifier, and envelope</h3>
+            <p>
+              The design includes low-pass, band-pass, and high-pass options, plus VCA and ADSR
+              shaping for different presets and playing styles.
+            </p>
+            <div class="case-chip-row">
+              <span>VCF</span>
+              <span>VCA</span>
+              <span>ADSR</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-contrast" id="architecture">
+        <div class="section-heading case-heading">
+          <p class="eyebrow">Architecture</p>
+          <h2>Six modules structured as one instrument.</h2>
+          <p>
+            The thesis presentation breaks the build into controller, oscillator, filter,
+            amplifier, envelope generator, and power supply. That breakdown is the clearest way
+            to understand the project.
+          </p>
+        </div>
+
+        <div class="case-focus-grid">
+          <article class="case-focus-card">
+            <p class="case-block-label">Controller</p>
+            <h3>Independent control routing for pitch, gate, and modulation.</h3>
+            <p>
+              Control voltage ranges from 0V to 5V, with separate outputs assigned to the other
+              modules rather than one shared control line.
+            </p>
+          </article>
+
+          <article class="case-focus-card">
+            <p class="case-block-label">Oscillator</p>
+            <h3>Frequency control, FM input, pulse width control, and six waveform options.</h3>
+            <p>
+              The VCO section includes coarse and fine tuning, modulation level control, and
+              voltage input for pitch tracking.
+            </p>
+          </article>
+
+          <article class="case-focus-card">
+            <p class="case-block-label">Output chain</p>
+            <h3>Filter, amplitude control, and envelope shaping in sequence.</h3>
+            <p>
+              The signal path moves from VCO to VCF to VCA, with the envelope generator shaping
+              the final response before output.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="section-heading case-heading">
+          <p class="eyebrow">Results</p>
+          <h2>Working thesis prototype with stable module behavior.</h2>
+          <p>
+            The reported outcome was a tuned synthesizer across the 0-5V range, a functioning
+            filter stage with multiple modes, a working VCA, and an envelope generator capable of
+            shaping plucks, pads, and bass-style presets.
+          </p>
+        </div>
+
+        <div class="case-cta">
+          <div>
+            <p class="eyebrow">Project material</p>
+            <h2>Open the thesis presentation.</h2>
+            <p>
+              The presentation is the cleanest public artifact for the project and documents the
+              design stages, module breakdown, and final evaluation.
+            </p>
+          </div>
+          <div class="case-cta-actions">
+            <a class="button button-dark" href="assets/cynth-v1/cynth-v1-thesis-presentation.pdf" target="_blank" rel="noreferrer">Open presentation PDF</a>
+            <a class="button button-light" href="index.html#current-work">Back to homepage</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Cynth V.1 project overview.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="assets/cynth-v1/cynth-v1-thesis-presentation.pdf" target="_blank" rel="noreferrer">Presentation PDF</a>
+        <a href="https://github.com/majdbenchobba" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>
