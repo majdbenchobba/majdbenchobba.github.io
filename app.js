@@ -18,17 +18,6 @@ const projects = [
     featured: true,
   },
   {
-    name: "Solarna Systems",
-    type: "code",
-    typeLabel: "Engineering",
-    status: "Public site",
-    summary:
-      "Static business site with responsive service pages and public solar engineering demo packs.",
-    tags: ["Solar PV", "Web", "Engineering"],
-    repoUrl: "https://github.com/majdbenchobba/solarna-systems",
-    liveUrl: "https://solarnasystems.com/",
-  },
-  {
     name: "Binance Futures Bot",
     type: "code",
     typeLabel: "Code",
