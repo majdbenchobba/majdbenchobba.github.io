@@ -1,9 +1,17 @@
 # majdbenchobba.github.io
 
-Root GitHub Pages homepage for Majd Ben Chobba.
+Personal GitHub Pages portfolio for Majd Ben Chobba.
 
-## Includes
+## Contents
 
-- A curated homepage for selected public projects
-- Direct links to the design portfolio and GitHub repositories
-- A lightweight static site built with plain HTML, CSS, and JavaScript
+- Selected public software repositories
+- Public overviews of BiasForge and Solarna Systems
+- Electrical and computer engineering education
+- Bachelor's and master's thesis work
+- Media, music, and design portfolio links
+
+Private product and business source code is not included in this repository.
+
+## Stack
+
+Plain HTML, CSS, and JavaScript, deployed through GitHub Pages.

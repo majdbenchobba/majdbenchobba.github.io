@@ -11,7 +11,7 @@ const projects = [
     typeLabel: "Code",
     status: "Testnet verified",
     summary:
-      "Testnet-first Binance Futures bot with dry runs, reporting, protection logic, and paper-run support.",
+      "Binance Futures SMA-crossover bot with testnet execution, dry runs, reporting, protection logic, and paper trading.",
     tags: ["Python", "Trading", "Automation"],
     repoUrl: "https://github.com/majdbenchobba/binance-futures-bot",
   },
@@ -21,7 +21,7 @@ const projects = [
     typeLabel: "Code",
     status: "Published utility",
     summary:
-      "Python scraper for product pages with CSV export and simple summary charts.",
+      "Python scraper for structured product-page extraction, CSV export, and summary charts.",
     tags: ["Python", "Scraping", "CLI"],
     repoUrl: "https://github.com/majdbenchobba/ai-web-scraper",
   },
@@ -31,7 +31,7 @@ const projects = [
     typeLabel: "Code",
     status: "Published utility",
     summary:
-      "CLI tool that normalizes broker and exchange trade CSV exports for later analysis.",
+      "CLI tool for cleaning and normalizing broker or exchange trade exports into a consistent CSV format.",
     tags: ["Python", "CSV", "Tooling"],
     repoUrl: "https://github.com/majdbenchobba/trade-export-normalizer",
   },

@@ -119,8 +119,12 @@ a {
 }
 
 .project-nav-trigger::after {
-  content: "▾";
-  font-size: 0.74rem;
+  content: "";
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.12rem) rotate(45deg);
   transition: transform 180ms ease;
 }
 
@@ -129,7 +133,7 @@ a {
 }
 
 .project-nav-menu[open] .project-nav-trigger::after {
-  transform: rotate(180deg);
+  transform: translateY(0.12rem) rotate(225deg);
 }
 
 .project-nav-trigger:hover {
@@ -218,6 +222,7 @@ h2 {
   font-family: "Sora", sans-serif;
   line-height: 1.02;
   letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 
 h1 {
@@ -237,6 +242,7 @@ h2 {
   margin: 1rem 0 0;
   color: var(--muted);
   line-height: 1.7;
+  text-wrap: pretty;
 }
 
 .hero-text {
@@ -394,7 +400,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, minmax(15.5rem, 18.5rem));
   gap: 1rem;
-  align-items: start;
+  align-items: stretch;
   justify-content: center;
   max-width: 59rem;
   margin: 0 auto;
@@ -503,7 +509,7 @@ h2 {
   grid-template-columns: repeat(2, minmax(18rem, 28rem));
   gap: 1rem;
   justify-content: center;
-  align-items: start;
+  align-items: stretch;
   max-width: 58rem;
   margin: 0 auto;
 }
@@ -584,7 +590,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
   width: 100%;
   align-self: center;
   justify-content: center;
@@ -771,6 +778,7 @@ h2 {
 .case-chip-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   margin-top: 0.95rem;
 }
@@ -909,10 +917,20 @@ h2 {
 
 .about-grid {
   grid-template-columns: repeat(3, minmax(16rem, 1fr));
-  align-items: start;
+  align-items: stretch;
   justify-content: center;
   max-width: 66rem;
   margin: 0 auto;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-card .text-link {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .footer {
@@ -1048,5 +1066,19 @@ h2 {
   .case-summary,
   .case-cta {
     padding: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
