@@ -519,6 +519,12 @@ h2 {
   flex-direction: column;
 }
 
+.venture-grid > .venture-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: min(100%, 28rem);
+  justify-self: center;
+}
+
 .venture-meta {
   display: flex;
   justify-content: space-between;
