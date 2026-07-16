@@ -131,18 +131,34 @@ function renderProjects() {
 renderFilters();
 renderProjects();
 
-const biasforgeNavMenu = document.querySelector(".biasforge-nav-menu");
+const projectNavMenus = [...document.querySelectorAll(".project-nav-menu")];
 
-if (biasforgeNavMenu) {
+if (projectNavMenus.length) {
+  projectNavMenus.forEach((menu) => {
+    menu.addEventListener("toggle", () => {
+      if (!menu.open) {
+        return;
+      }
+
+      projectNavMenus.forEach((otherMenu) => {
+        if (otherMenu !== menu) {
+          otherMenu.removeAttribute("open");
+        }
+      });
+    });
+  });
+
   document.addEventListener("click", (event) => {
-    if (!biasforgeNavMenu.contains(event.target)) {
-      biasforgeNavMenu.removeAttribute("open");
-    }
+    projectNavMenus.forEach((menu) => {
+      if (!menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      biasforgeNavMenu.removeAttribute("open");
+      projectNavMenus.forEach((menu) => menu.removeAttribute("open"));
     }
   });
 }

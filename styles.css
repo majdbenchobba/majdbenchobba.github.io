@@ -88,15 +88,15 @@ a {
   color: var(--muted);
 }
 
-.biasforge-nav-menu {
+.project-nav-menu {
   position: relative;
 }
 
-.biasforge-nav-menu[open] {
+.project-nav-menu[open] {
   z-index: 5;
 }
 
-.topbar-link-biasforge {
+.project-nav-trigger {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -105,38 +105,38 @@ a {
   cursor: pointer;
 }
 
-.biasforge-nav-trigger {
+.project-nav-trigger {
   list-style: none;
   transition: transform 180ms ease, color 180ms ease;
 }
 
-.biasforge-nav-trigger::-webkit-details-marker {
+.project-nav-trigger::-webkit-details-marker {
   display: none;
 }
 
-.biasforge-nav-trigger::marker {
+.project-nav-trigger::marker {
   content: "";
 }
 
-.biasforge-nav-trigger::after {
+.project-nav-trigger::after {
   content: "▾";
   font-size: 0.74rem;
   transition: transform 180ms ease;
 }
 
-.biasforge-nav-menu[open] .biasforge-nav-trigger {
+.project-nav-menu[open] .project-nav-trigger {
   color: #8f3915;
 }
 
-.biasforge-nav-menu[open] .biasforge-nav-trigger::after {
+.project-nav-menu[open] .project-nav-trigger::after {
   transform: rotate(180deg);
 }
 
-.biasforge-nav-trigger:hover {
+.project-nav-trigger:hover {
   transform: translateY(-2px);
 }
 
-.biasforge-nav-pop {
+.project-nav-pop {
   position: absolute;
   top: calc(100% + 0.8rem);
   left: 50%;
@@ -152,7 +152,7 @@ a {
   transform: translateX(-50%);
 }
 
-.biasforge-nav-option {
+.project-nav-option {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,7 +166,7 @@ a {
   transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
-.biasforge-nav-option:hover {
+.project-nav-option:hover {
   transform: translateY(-2px);
   background: var(--accent-soft);
   color: var(--accent);
@@ -975,7 +975,7 @@ h2 {
     display: grid;
   }
 
-  .biasforge-nav-pop {
+  .project-nav-pop {
     left: auto;
     right: 0;
     transform: none;
