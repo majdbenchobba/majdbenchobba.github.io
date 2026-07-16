@@ -818,6 +818,38 @@ h2 {
   margin: 0 auto;
 }
 
+.education-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 66rem;
+  margin: 0 auto;
+}
+
+.course-list {
+  display: grid;
+  gap: 0;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.78rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.course-list strong {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
 .case-cta {
   max-width: 58rem;
   margin: 0 auto;
@@ -933,6 +965,11 @@ h2 {
     max-width: 45rem;
   }
 
+  .education-course-grid {
+    grid-template-columns: repeat(2, minmax(16rem, 22rem));
+    max-width: 45rem;
+  }
+
   .case-cta {
     grid-template-columns: 1fr;
     display: grid;
@@ -988,7 +1025,8 @@ h2 {
 
   .case-card-grid,
   .case-media-grid,
-  .case-focus-grid {
+  .case-focus-grid,
+  .education-course-grid {
     grid-template-columns: 1fr;
     max-width: 28rem;
   }

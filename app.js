@@ -1,22 +1,10 @@
 const filters = [
   { id: "all", label: "All projects" },
-  { id: "creative", label: "Creative" },
   { id: "code", label: "Code" },
+  { id: "creative", label: "Creative" },
 ];
 
 const projects = [
-  {
-    name: "Design and Video Portfolio",
-    type: "creative",
-    typeLabel: "Creative",
-    status: "Live site",
-    summary:
-      "GitHub Pages portfolio for campaign systems, event visuals, and editorial PDF work.",
-    tags: ["GitHub Pages", "Portfolio", "Design"],
-    repoUrl: "https://github.com/majdbenchobba/design-and-video-portfolio",
-    liveUrl: "https://majdbenchobba.github.io/design-and-video-portfolio/",
-    featured: true,
-  },
   {
     name: "Binance Futures Bot",
     type: "code",
@@ -56,6 +44,18 @@ const projects = [
       "Utility for saving YouTube or YouTube Music audio as WAV files.",
     tags: ["Python", "Audio", "Utility"],
     repoUrl: "https://github.com/majdbenchobba/ytmusic-downloader",
+  },
+  {
+    name: "Design and Video Portfolio",
+    type: "creative",
+    typeLabel: "Creative",
+    status: "Live site",
+    summary:
+      "GitHub Pages portfolio for campaign systems, event visuals, and editorial PDF work.",
+    tags: ["GitHub Pages", "Portfolio", "Design"],
+    repoUrl: "https://github.com/majdbenchobba/design-and-video-portfolio",
+    liveUrl: "https://majdbenchobba.github.io/design-and-video-portfolio/",
+    featured: true,
   },
 ];
 
