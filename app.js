@@ -1,161 +1,72 @@
-const filters = [
-  { id: "all", label: "All projects" },
-  { id: "code", label: "Code" },
-  { id: "creative", label: "Creative" },
-];
-
 const projects = [
   {
     name: "Binance Futures Bot",
-    type: "code",
-    typeLabel: "Code",
-    status: "Testnet verified",
-    summary:
-      "Binance Futures SMA-crossover bot with testnet execution, dry runs, reporting, protection logic, and paper trading.",
+    summary: "Binance Futures SMA-crossover bot with testnet execution, dry runs, reporting, protection logic, and paper trading.",
     tags: ["Python", "Trading", "Automation"],
     repoUrl: "https://github.com/majdbenchobba/binance-futures-bot",
   },
   {
     name: "AI Web Scraper",
-    type: "code",
-    typeLabel: "Code",
-    status: "Published utility",
-    summary:
-      "Python scraper for structured product-page extraction, CSV export, and summary charts.",
+    summary: "Python scraper for structured product-page extraction, CSV export, and summary charts.",
     tags: ["Python", "Scraping", "CLI"],
     repoUrl: "https://github.com/majdbenchobba/ai-web-scraper",
   },
   {
     name: "Trade Export Normalizer",
-    type: "code",
-    typeLabel: "Code",
-    status: "Published utility",
-    summary:
-      "CLI tool for cleaning and normalizing broker or exchange trade exports into a consistent CSV format.",
+    summary: "CLI tool for cleaning and normalizing broker or exchange trade exports into a consistent CSV format.",
     tags: ["Python", "CSV", "Tooling"],
     repoUrl: "https://github.com/majdbenchobba/trade-export-normalizer",
   },
   {
     name: "YT Music Downloader",
-    type: "code",
-    typeLabel: "Code",
-    status: "Published utility",
-    summary:
-      "Utility for saving YouTube or YouTube Music audio as WAV files.",
+    summary: "Utility for saving YouTube or YouTube Music audio as WAV files.",
     tags: ["Python", "Audio", "Utility"],
     repoUrl: "https://github.com/majdbenchobba/ytmusic-downloader",
   },
-  {
-    name: "Design and Video Portfolio",
-    type: "creative",
-    typeLabel: "Creative",
-    status: "Live site",
-    summary:
-      "GitHub Pages portfolio for campaign systems, event visuals, and editorial PDF work.",
-    tags: ["GitHub Pages", "Portfolio", "Design"],
-    repoUrl: "https://github.com/majdbenchobba/design-and-video-portfolio",
-    liveUrl: "https://majdbenchobba.github.io/design-and-video-portfolio/",
-    featured: true,
-  },
 ];
-
-const state = { activeFilter: "all" };
-
-const filterRow = document.querySelector("#filter-row");
-const projectGrid = document.querySelector("#project-grid");
-
-function filteredProjects() {
-  return state.activeFilter === "all"
-    ? projects
-    : projects.filter((project) => project.type === state.activeFilter);
-}
-
-function renderFilters() {
-  filterRow.innerHTML = "";
-
-  filters.forEach((filter) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = `filter-chip${state.activeFilter === filter.id ? " is-active" : ""}`;
-    button.textContent = filter.label;
-    button.addEventListener("click", () => {
-      state.activeFilter = filter.id;
-      renderFilters();
-      renderProjects();
-    });
-    filterRow.appendChild(button);
-  });
-}
 
 function createProjectCard(project) {
   const card = document.createElement("article");
   card.className = "project-card";
 
-  const links = [
-    `<a class="project-link" href="${project.repoUrl}" target="_blank" rel="noreferrer">Open repo</a>`,
-  ];
-
-  if (project.liveUrl) {
-    links.unshift(
-      `<a class="project-link" href="${project.liveUrl}" target="_blank" rel="noreferrer">Open live site</a>`
-    );
-  }
-
+  // Content is curated locally; this renderer does not consume external data.
   card.innerHTML = `
-    <div class="project-meta">
-      <span class="project-type">${project.typeLabel}</span>
-      <span class="project-status">${project.status}</span>
-    </div>
+    <div class="project-meta"><span class="project-type">Public repository</span></div>
     <h3>${project.name}</h3>
     <p class="project-summary">${project.summary}</p>
     <div class="project-tags">
       ${project.tags.map((tag) => `<span>${tag}</span>`).join("")}
     </div>
-    <div class="project-links">${links.join("")}</div>
+    <div class="project-links">
+      <a class="project-link" href="${project.repoUrl}" target="_blank" rel="noreferrer" aria-label="Open ${project.name} repository">Open repo</a>
+    </div>
   `;
-
   return card;
 }
 
-function renderProjects() {
-  const visibleProjects = filteredProjects();
-  projectGrid.innerHTML = "";
-  projectGrid.className = "project-grid";
-  projectGrid.classList.add(`count-${visibleProjects.length}`);
-
-  visibleProjects.forEach((project) => {
-    projectGrid.appendChild(createProjectCard(project));
-  });
+const projectGrid = document.querySelector("#project-grid");
+if (projectGrid) {
+  projectGrid.replaceChildren(...projects.map(createProjectCard));
+  projectGrid.classList.add(`count-${projects.length}`);
 }
 
-renderFilters();
-renderProjects();
-
+// Preserve dropdown behavior on any case-study pages using this script.
 const projectNavMenus = [...document.querySelectorAll(".project-nav-menu")];
-
-if (projectNavMenus.length) {
-  projectNavMenus.forEach((menu) => {
-    menu.addEventListener("toggle", () => {
-      if (!menu.open) {
-        return;
-      }
-
-      projectNavMenus.forEach((otherMenu) => {
-        if (otherMenu !== menu) {
-          otherMenu.removeAttribute("open");
-        }
+projectNavMenus.forEach((menu) => {
+  menu.addEventListener("toggle", () => {
+    if (menu.open) {
+      projectNavMenus.forEach((other) => {
+        if (other !== menu) other.removeAttribute("open");
       });
-    });
+    }
   });
-
+});
+if (projectNavMenus.length) {
   document.addEventListener("click", (event) => {
     projectNavMenus.forEach((menu) => {
-      if (!menu.contains(event.target)) {
-        menu.removeAttribute("open");
-      }
+      if (!menu.contains(event.target)) menu.removeAttribute("open");
     });
   });
-
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       projectNavMenus.forEach((menu) => menu.removeAttribute("open"));

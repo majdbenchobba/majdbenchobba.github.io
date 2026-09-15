@@ -1,2 +1,44 @@
 .DS_Store
 Thumbs.db
+
+# Local environments and generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.cache/
+.playwright/
+test-results/
+playwright-report/
+
+# Credentials and local configuration (never commit real secrets)
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+.aws/
+.ssh/
+credentials.json
+service-account*.json
+
+# Operational data and archives do not belong in this public website
+*.db
+*.sqlite
+*.sqlite3
+*.db-*
+*.sqlite-*
+*.sqlite3-*
+*.log
+*.csv
+*.zip
+*.7z
+*.bak
+*.dump
+
+# Local-only review material
+private/
+publication-review/

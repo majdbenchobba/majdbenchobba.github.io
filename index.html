@@ -4,252 +4,151 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Majd Ben Chobba</title>
-    <meta
-      name="description"
-      content="Majd Ben Chobba's portfolio across engineering, software, product development, and creative work."
-    >
+    <meta name="description" content="Majd Ben Chobba's portfolio across engineering, software, product development, and creative work.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="styles.css?v=20260716d">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=builder-1">
+    <link rel="stylesheet" href="homepage.css?v=editorial-1">
   </head>
-  <body>
-    <div class="grain"></div>
-
+  <body class="portfolio-home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="hero">
-      <nav class="topbar">
+      <nav class="topbar" aria-label="Main navigation">
         <a class="brand" href="#top">Majd Ben Chobba</a>
         <div class="topbar-links">
-          <a href="#current-work">Current work</a>
-          <a href="#selected-work">Selected work</a>
+          <a href="#current-work">Work</a>
           <a href="#about">About</a>
           <a href="education.html">Education</a>
-          <details class="project-nav-menu">
-            <summary class="project-nav-trigger">BiasForge</summary>
-            <div class="project-nav-pop">
-              <a class="project-nav-option" href="biasforge.html">Project overview</a>
-              <a class="project-nav-option" href="https://biasforge.com/" target="_blank" rel="noreferrer">Open BiasForge.com</a>
-            </div>
-          </details>
-          <details class="project-nav-menu">
-            <summary class="project-nav-trigger">Solarna Systems</summary>
-            <div class="project-nav-pop">
-              <a class="project-nav-option" href="solarna.html">Project overview</a>
-              <a class="project-nav-option" href="https://solarnasystems.com/" target="_blank" rel="noreferrer">Open SolarnaSystems.com</a>
-            </div>
-          </details>
           <a href="https://github.com/majdbenchobba" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="#creative-direction">Creative</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
-
       <div class="hero-layout" id="top">
         <section class="hero-copy">
-          <p class="eyebrow">Engineering, software, product, and creative direction</p>
-          <h1>Engineering, software, product development, and creative work.</h1>
+          <p class="eyebrow">Electrical engineer &amp; founder</p>
+          <h1>Engineering<br>systems.<br><span>Building software.</span></h1>
           <p class="hero-text">
-            Vlor&euml;, Albania-based electrical engineer, master's student, and founder working across
-            software, automation, product development, and creative direction.
+            I'm Majd Ben Chobba, an electrical engineer based in Tunisia and founder of
+            Solarna Systems. I work across circuit design, Python, PLC programming, and automation.
           </p>
-
           <p class="hero-text hero-text-secondary">
-            My background includes process engineering at Schneider Electric, AI evaluation,
-            multilingual technical review, communication strategy, trading automation, and
-            independent product and music ventures.
+            I'm developing Solara, an AI workspace for software projects.
           </p>
-
           <div class="hero-actions">
-            <a class="button button-dark" href="#selected-work">Browse featured projects</a>
-            <a class="button button-light" href="https://majdbenchobba.github.io/design-and-video-portfolio/" target="_blank" rel="noreferrer">Open design portfolio</a>
+            <a class="button button-dark" href="solara.html">Explore Solara</a>
+            <a class="button button-light" href="#selected-work">Browse public repositories</a>
           </div>
-
           <div class="hero-stats">
-            <article>
-              <span class="stat-number">05</span>
-              <span class="stat-label">Featured repositories</span>
-            </article>
-            <article>
-              <span class="stat-number">02</span>
-              <span class="stat-label">Engineering degrees</span>
-            </article>
-            <article>
-              <span class="stat-number">07</span>
-              <span class="stat-label">Portfolio projects</span>
-            </article>
+            <article><span class="stat-number">BSc</span><span class="stat-label">Electrical Engineering</span></article>
+            <article><span class="stat-number">Python</span><span class="stat-label">Software &amp; automation</span></article>
+            <article><span class="stat-number">PLC</span><span class="stat-label">Control systems</span></article>
           </div>
         </section>
-
-        <aside class="hero-panel">
-          <p class="eyebrow">Portfolio focus</p>
-          <div class="hero-panel-grid">
-            <article class="hero-panel-card">
-              <span class="hero-panel-label">Product and engineering</span>
-              <h3>Solar engineering, trading technology, and applied technical research.</h3>
-            </article>
-            <article class="hero-panel-card hero-panel-card-accent">
-              <span class="hero-panel-label">Software tools</span>
-              <h3>Five focused repositories covering automation, data, and practical utilities.</h3>
-            </article>
-            <article class="hero-panel-card hero-panel-card-dark">
-              <span class="hero-panel-label">Creative work</span>
-              <h3>Design portfolio, campaign systems, event visuals, and editorial documents.</h3>
-            </article>
-          </div>
+        <aside class="engineering-plate" aria-label="Hardware and software">
+          <svg class="systems-drawing" viewBox="0 0 400 360" fill="none" aria-hidden="true" focusable="false">
+            <g class="drawing-grid" stroke="currentColor" stroke-width="0.6">
+              <path d="M40 20V340M120 20V340M200 20V340M280 20V340M360 20V340M20 60H380M20 140H380M20 220H380M20 300H380"/>
+              <circle cx="200" cy="180" r="140"/><circle cx="200" cy="180" r="104"/>
+              <path d="M80 60L320 300M80 300L320 60"/>
+            </g>
+            <g stroke="currentColor" stroke-width="1.5">
+              <rect x="146" y="126" width="108" height="108" rx="4"/>
+              <rect x="158" y="138" width="84" height="84" rx="2"/>
+              <path d="M40 100H104L146 142M40 180H146M40 260H104L146 218M254 142L296 100H360M254 180H360M254 218L296 260H360M184 126V72M216 126V72M184 234V288M216 234V288"/>
+            </g>
+            <g class="drawing-accent" stroke="currentColor" stroke-width="2">
+              <path d="M170 180H180L188 164L200 198L212 162L220 180H230"/>
+              <circle cx="40" cy="100" r="4"/><circle cx="40" cy="180" r="4"/><circle cx="40" cy="260" r="4"/>
+              <circle cx="360" cy="100" r="4"/><circle cx="360" cy="180" r="4"/><circle cx="360" cy="260" r="4"/>
+            </g>
+          </svg>
+          <p class="plate-caption">Hardware &amp; software.</p>
         </aside>
       </div>
     </header>
 
-    <main>
-      <section class="section" id="current-work">
-        <div class="section-heading">
-          <p class="eyebrow">Current work</p>
-          <h2>Active projects.</h2>
-          <p>Products, engineering, research, and creative work.</p>
+    <main id="main-content" tabindex="-1">
+      <section class="section" id="current-work" aria-labelledby="solara-heading">
+        <div class="featured-project">
+          <div class="featured-copy">
+            <p class="eyebrow">Featured project / In development</p>
+            <h2 id="solara-heading">Solara</h2>
+            <p class="featured-lead">An AI workspace for software development.</p>
+            <p>In development: project files, coding tools, and an assistant in one environment, with user approval for file changes and command execution.</p>
+            <a class="button button-dark" href="solara.html">View Solara project</a>
+          </div>
+          <aside class="featured-principles" aria-label="Solara development direction">
+            <p class="eyebrow">Development focus</p>
+            <dl>
+              <div><dt>Project context</dt><dd>Files, tasks, and conversation history.</dd></div>
+              <div><dt>Development tools</dt><dd>Code editing and validation.</dd></div>
+              <div><dt>User control</dt><dd>Approval before changes or execution.</dd></div>
+            </dl>
+          </aside>
         </div>
+      </section>
 
+      <section class="section" id="engineering-work" aria-labelledby="engineering-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Engineering &amp; software</p>
+          <h2 id="engineering-heading">Selected projects.</h2>
+        </div>
         <div class="venture-grid">
           <article class="venture-card">
-            <div class="venture-meta">
-              <span class="venture-type">Product platform</span>
-              <span class="venture-status">Live product</span>
+            <div class="venture-heading">
+              <div class="venture-meta"><span class="venture-type">Engineering business</span><span class="venture-status">Founder</span></div>
+              <h3>Solarna Systems</h3>
             </div>
-            <h3>BiasForge</h3>
-            <p>
-              Public-beta trading platform combining tools, benchmark boards, live news, entity
-              research, customer accounts, journal, and model workspaces.
-            </p>
-            <div class="venture-tags">
-              <span>Trading</span>
-              <span>Product</span>
-              <span>Public beta</span>
-              <span>Research</span>
-            </div>
-            <div class="venture-links">
-              <a class="project-link" href="biasforge.html">Read case study</a>
-              <a class="project-link" href="https://biasforge.com/" target="_blank" rel="noreferrer">Open live product</a>
+            <div class="venture-details">
+              <p>Electrical systems, automation, and technical consulting.</p>
+              <div class="venture-tags"><span>Electrical engineering</span><span>Automation</span><span>Energy</span></div>
+              <div class="venture-links">
+                <a class="project-link" href="solarna.html">Business overview</a>
+                <a class="project-link" href="https://solarnasystems.com/" target="_blank" rel="noreferrer">Open site</a>
+              </div>
             </div>
           </article>
-
           <article class="venture-card">
-            <div class="venture-meta">
-              <span class="venture-type">Solar engineering</span>
-              <span class="venture-status">Live business</span>
+            <div class="venture-heading">
+              <div class="venture-meta"><span class="venture-type">Market research</span><span class="venture-status">Independent project</span></div>
+              <h3>BiasForge</h3>
             </div>
-            <h3>Solarna Systems</h3>
-            <p>
-              Remote solar PV engineering, electrical CAD, automation, monitoring, and commissioning support.
-            </p>
-            <div class="venture-tags">
-              <span>Solar PV</span>
-              <span>Electrical CAD</span>
-              <span>Automation</span>
-              <span>SCADA</span>
-            </div>
-            <div class="venture-links">
-              <a class="project-link" href="solarna.html">Project overview</a>
-              <a class="project-link" href="https://solarnasystems.com/" target="_blank" rel="noreferrer">Open site</a>
+            <div class="venture-details">
+              <p>A market research workspace combining news, research, and trading analysis.</p>
+              <div class="venture-tags"><span>Markets</span><span>Research</span><span>Product development</span></div>
+              <div class="venture-links">
+                <a class="project-link" href="biasforge.html">Read case study</a>
+                <a class="project-link" href="https://biasforge.com/" target="_blank" rel="noreferrer">Visit website</a>
+              </div>
             </div>
           </article>
-
           <article class="venture-card">
-            <div class="venture-meta">
-              <span class="venture-type">Master's thesis</span>
-              <span class="venture-status">In progress</span>
+            <div class="venture-heading">
+              <div class="venture-meta"><span class="venture-type">Bachelor's thesis</span><span class="venture-status">Completed</span></div>
+              <h3>Cynth V.1</h3>
+              <figure class="project-photo">
+                <div class="project-photo-frame">
+                  <img src="assets/cynth-v1/cynth-v1-front-panel.jpg" alt="Front panel of the Cynth V.1 analog synthesizer" loading="lazy" decoding="async">
+                </div>
+                <figcaption>Cynth V.1 / Hardware project</figcaption>
+              </figure>
             </div>
-            <h3>Virtual Synth Thesis</h3>
-            <p>
-              JUCE-based VST synthesizer in C++, covering audio processing, interface design, and
-              oscillator architecture.
-            </p>
-            <div class="venture-tags">
-              <span>JUCE</span>
-              <span>C++</span>
-              <span>Audio plugin</span>
+            <div class="venture-details">
+              <p>Six-module analog synthesizer: controller, VCO, VCF, VCA, envelope generation, and power supply.</p>
+              <div class="venture-tags"><span>Analog electronics</span><span>Circuit design</span><span>Hardware</span></div>
+              <div class="venture-links"><a class="project-link" href="cynth-v1.html">Explore the hardware</a></div>
             </div>
           </article>
-
           <article class="venture-card">
-            <div class="venture-meta">
-              <span class="venture-type">Bachelor's thesis</span>
-              <span class="venture-status">Completed</span>
+            <div class="venture-heading">
+              <div class="venture-meta"><span class="venture-type">Audio software</span><span class="venture-status">Academic prototype</span></div>
+              <h3>Virtual Synthesizer</h3>
             </div>
-            <h3>Cynth V.1</h3>
-            <p>
-              Six-module analog synthesizer built as a bachelor's thesis project, covering
-              controller, VCO, VCF, VCA, envelope generation, and power supply.
-            </p>
-            <div class="venture-tags">
-              <span>Analog synth</span>
-              <span>Hardware</span>
-              <span>Thesis</span>
-            </div>
-            <div class="venture-links">
-              <a class="project-link" href="cynth-v1.html">Project overview</a>
-              <a class="project-link" href="assets/cynth-v1/cynth-v1-thesis-presentation.pdf" target="_blank" rel="noreferrer">Open presentation PDF</a>
-            </div>
-          </article>
-
-          <article class="venture-card">
-            <div class="venture-meta">
-              <span class="venture-type">Media channel</span>
-              <span class="venture-status">CYLTH Studio</span>
-            </div>
-            <h3>CYLTH Studio</h3>
-            <p>
-              Independent media channel covering trading, studio production, technology, and
-              long-form discussion.
-            </p>
-            <div class="venture-tags">
-              <span>Streaming</span>
-              <span>Trading</span>
-              <span>Video</span>
-              <span>Production</span>
-            </div>
-            <div class="venture-links">
-              <a class="project-link" href="https://www.youtube.com/@Cylthing" target="_blank" rel="noreferrer">YouTube channel</a>
-              <a class="project-link" href="https://www.youtube.com/watch?v=Th-pbDKBWh4" target="_blank" rel="noreferrer">Watch first video</a>
-              <a class="project-link" href="https://kick.com/cylth" target="_blank" rel="noreferrer">Kick</a>
-            </div>
-          </article>
-
-          <article class="venture-card">
-            <div class="venture-meta">
-              <span class="venture-type">Artist project</span>
-              <span class="venture-status">CYLTH</span>
-            </div>
-            <h3>CYLTH</h3>
-            <p>
-              Independent artist project focused on cinematic electronic music and sound design.
-            </p>
-            <div class="venture-tags">
-              <span>Sound design</span>
-              <span>Electronic</span>
-              <span>Artist profile</span>
-            </div>
-            <div class="venture-links">
-              <a class="project-link" href="https://www.instagram.com/cylth_rw/" target="_blank" rel="noreferrer">Instagram</a>
-              <a class="project-link" href="https://www.facebook.com/Cylth" target="_blank" rel="noreferrer">Facebook</a>
-              <a class="project-link" href="https://www.youtube.com/@Cylth" target="_blank" rel="noreferrer">YouTube</a>
-              <a class="project-link" href="https://open.spotify.com/artist/6RrxNnSzvZ9wxp4fJvxbhg" target="_blank" rel="noreferrer">Spotify</a>
-              <a class="project-link" href="https://soundcloud.com/cylth" target="_blank" rel="noreferrer">SoundCloud</a>
-              <a class="project-link" href="https://soundbetter.com/profiles/680846-majd" target="_blank" rel="noreferrer">SoundBetter</a>
-            </div>
-          </article>
-
-          <article class="venture-card">
-            <div class="venture-meta">
-              <span class="venture-type">Record label</span>
-              <span class="venture-status">In development</span>
-            </div>
-            <h3>Raw Emotions</h3>
-            <p>Independent record label founded by Majd, currently preparing its public launch.</p>
-            <div class="venture-tags">
-              <span>Record label</span>
-              <span>Founder</span>
-              <span>In development</span>
+            <div class="venture-details">
+              <p>A VST synthesizer prototype built with C++ and JUCE during MSc studies.</p>
+              <div class="venture-tags"><span>JUCE</span><span>C++</span><span>Audio plugin</span></div>
+              <div class="venture-links"><a class="project-link" href="education.html">Academic background</a></div>
             </div>
           </article>
         </div>
@@ -257,102 +156,96 @@
 
       <section class="section" id="selected-work">
         <div class="section-heading">
-          <p class="eyebrow">Selected work</p>
-          <h2>Public repositories and design work.</h2>
-          <p>
-            Five curated projects representing software, automation, data tooling, and visual communication.
-          </p>
+          <p class="eyebrow">Public code</p>
+          <h2>Public repositories.</h2>
+          <p>Automation, data processing, and audio utilities.</p>
         </div>
-
-        <div class="filter-row" id="filter-row"></div>
-        <div class="project-grid" id="project-grid" aria-live="polite"></div>
+        <div class="project-grid" id="project-grid"></div>
+        <noscript><p>JavaScript is disabled. <a class="text-link" href="https://github.com/majdbenchobba?tab=repositories">Browse the repositories on GitHub</a>.</p></noscript>
       </section>
 
       <section class="section" id="about">
         <div class="section-heading">
           <p class="eyebrow">About</p>
-          <h2>Engineering expertise with product and communication experience.</h2>
-          <p>
-            Professional experience across engineering, AI evaluation, technical communication,
-            and founder-led product development.
-          </p>
+          <h2>Education &amp; experience.</h2>
         </div>
-
         <div class="about-grid">
           <article class="about-card">
             <h3>Electrical and computer engineering</h3>
             <p>
-              BSc Electrical Engineering completed in 2024; currently pursuing an MSc in Computer
-              Science Engineering at &Oacute;buda University.
+              BSc Electrical Engineering completed in 2024 at &Oacute;buda University, followed by
+              MSc studies in Computer Science Engineering focused on Robotics and Embedded Systems.
+              The MSc was not completed.
             </p>
             <a class="text-link" href="education.html">View education details</a>
           </article>
           <article class="about-card">
             <h3>AI and technical evaluation</h3>
-            <p>
-              Experience evaluating multilingual AI outputs across English, French, and Arabic, with
-              a focus on language quality, factual accuracy, coding, and technical reasoning.
-            </p>
+            <p>Experience evaluating multilingual AI outputs across English, French, and Arabic, with a focus on language quality, factual accuracy, coding, and technical reasoning.</p>
           </article>
           <article class="about-card">
-            <h3>Communication and product development</h3>
-            <p>
-              Experience in communication strategy and founder-led product development for
-              public-facing systems, brands, and software.
-            </p>
+            <h3>Software and design</h3>
+            <p>Software development, visual design, and video production.</p>
           </article>
         </div>
       </section>
 
-      <section class="section section-contrast" id="creative-direction">
+      <section class="section section-contrast" id="creative-direction" aria-labelledby="creative-heading">
         <div class="section-heading">
-          <p class="eyebrow">Creative direction</p>
-          <h2>Design work built for clarity first.</h2>
-          <p>
-            Public-facing communication work: campaign posts, event visuals, quote formats, and
-            longer-form PDF documents.
-          </p>
+          <p class="eyebrow">Beyond engineering</p>
+          <h2 id="creative-heading">Music &amp; design.</h2>
         </div>
-
-        <div class="creative-layout">
+        <div class="creative-compact-grid">
           <article class="creative-note">
-            <h3>What the portfolio shows</h3>
-            <p>
-              Campaign systems, operational explainers, event visuals, and editorial documents.
-            </p>
-            <a class="text-link" href="https://majdbenchobba.github.io/design-and-video-portfolio/" target="_blank" rel="noreferrer">Visit the design portfolio</a>
+            <h3>Design &amp; video</h3>
+            <p>Campaign systems, event visuals, and editorial documents.</p>
+            <a class="text-link" href="https://majdbenchobba.github.io/design-and-video-portfolio/" target="_blank" rel="noreferrer">Design portfolio</a>
           </article>
+          <article class="creative-note">
+            <h3>CYLTH</h3>
+            <p>Cinematic electronic music and sound design.</p>
+            <div class="creative-links">
+              <a class="text-link" href="https://open.spotify.com/artist/6RrxNnSzvZ9wxp4fJvxbhg" target="_blank" rel="noreferrer">Spotify</a>
+              <a class="text-link" href="https://soundcloud.com/cylth" target="_blank" rel="noreferrer">SoundCloud</a>
+            </div>
+          </article>
+          <article class="creative-note">
+            <h3>CYLTH Studio</h3>
+            <p>Studio production, technology, trading, and long-form discussion.</p>
+            <div class="creative-links">
+              <a class="text-link" href="https://www.youtube.com/@Cylthing" target="_blank" rel="noreferrer">YouTube</a>
+              <a class="text-link" href="https://kick.com/cylth" target="_blank" rel="noreferrer">Kick</a>
+            </div>
+          </article>
+          <article class="creative-note">
+            <h3>Raw Emotions</h3>
+            <p>Independent record label. Public launch in preparation.</p>
+            <span class="creative-status">In development</span>
+          </article>
+        </div>
+      </section>
 
-          <div class="creative-points">
-            <article class="creative-point">
-              <span class="creative-point-label">Campaign systems</span>
-              <p>Consistent visual systems for multi-post communication.</p>
-            </article>
-            <article class="creative-point">
-              <span class="creative-point-label">Event visuals</span>
-              <p>Poster-led work with clear hierarchy and atmosphere.</p>
-            </article>
-            <article class="creative-point">
-              <span class="creative-point-label">Document work</span>
-              <p>Reports, flyers, and longer-form PDF deliverables.</p>
-            </article>
+      <section class="section" id="contact" aria-labelledby="contact-heading">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">Get in touch</p>
+            <h2 id="contact-heading">Have an engineering or software project in mind?</h2>
+            <p>Let's talk. For business enquiries, visit Solarna Systems.</p>
           </div>
+          <a class="button button-dark" href="https://solarnasystems.com/" target="_blank" rel="noreferrer">Visit Solarna Systems</a>
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <p>Majd Ben Chobba portfolio and project index.</p>
       <div class="footer-links">
         <a href="https://github.com/majdbenchobba" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="biasforge.html">BiasForge case study</a>
+        <a href="solara.html">Solara</a>
+        <a href="biasforge.html">BiasForge</a>
         <a href="solarna.html">Solarna Systems</a>
-        <a href="cynth-v1.html">Cynth V.1</a>
-        <a href="https://www.youtube.com/@Cylthing" target="_blank" rel="noreferrer">CYLTH Studio</a>
-        <a href="https://majdbenchobba.github.io/design-and-video-portfolio/" target="_blank" rel="noreferrer">Design portfolio</a>
+        <a href="#creative-direction">Creative work</a>
       </div>
     </footer>
-
-    <script src="app.js?v=20260716d"></script>
+    <script src="app.js?v=builder-1"></script>
   </body>
 </html>
