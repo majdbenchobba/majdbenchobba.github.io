@@ -92,8 +92,8 @@ def main():
                     errors.append(f"{label}: missing fragment: {reference}")
 
     required = {
-        "index.html": ("Tunisia", "Solara", "solara.html", "Solarna Systems", "The thesis project is in progress and the degree is not yet completed."),
-        "education.html": ("the thesis project is in progress", "the thesis manuscript and degree are not yet complete"),
+        "index.html": ("Tunisia", "Solara", "solara.html", "Solarna Systems", "SolarnaPV", "The MSc programme is currently paused", "the degree was not conferred"),
+        "education.html": ("The programme is currently paused", "the MSc degree was not conferred", "No MSc thesis manuscript or PDF is publicly distributed"),
         "solara.html": ("proprietary and in development", "source code is not publicly distributed", "development goal"),
     }
     for name, phrases in required.items():
@@ -106,7 +106,10 @@ def main():
             if phrase.lower() not in normalized:
                 errors.append(f"{name}: missing expected wording: {phrase}")
         if name == "education.html":
-            for stale in ("2024-present", "current programme", "current thesis"):
+            for stale in (
+                "2024-present", "current programme", "current thesis",
+                "thesis project is in progress", "degree is not yet complete",
+            ):
                 if stale in normalized:
                     errors.append(f"{name}: outdated education wording: {stale}")
 
@@ -164,10 +167,12 @@ def main():
             positions.append(position)
         if positions != sorted(positions):
             errors.append("index.html: homepage sections are out of order")
-        if "Academic prototype" not in homepage.source:
-            errors.append("index.html: missing academic prototype label")
+        if "Private development" not in homepage.source:
+            errors.append("index.html: missing private-development label")
         if "MSc studies not completed</span>" in homepage.source:
             errors.append("index.html: degree status should not be a project badge")
+        if 'href="https://pv.solarnasystems.com/"' not in homepage.source:
+            errors.append("index.html: missing SolarnaPV project link")
         if 'id="filter-row"' in homepage.source:
             errors.append("index.html: obsolete mixed-project filters remain")
         if 'href="#main-content"' not in homepage.source:

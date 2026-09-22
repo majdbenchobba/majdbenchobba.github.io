@@ -6,10 +6,11 @@ Personal GitHub Pages portfolio for Majd Ben Chobba, an electrical engineer base
 
 - Solara: a source-free overview of an AI workspace in development
 - Solarna Systems: engineering business overview
+- SolarnaPV: a live PV analysis application with private source
 - BiasForge: a separate market-research and trading-workspace project
 - Selected public software repositories
-- Completed BSc Electrical Engineering and an ongoing MSc thesis project; the degree is not yet complete
-- Cynth V.1 bachelor's thesis and virtual synthesizer academic project
+- Completed BSc Electrical Engineering and paused MSc studies; the MSc degree was not conferred
+- Cynth V.1 bachelor's thesis and an independently maintained virtual synthesizer project
 - Media, music, and design portfolio links
 
 ## Publication boundaries
