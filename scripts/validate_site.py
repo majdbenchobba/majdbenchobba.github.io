@@ -92,8 +92,8 @@ def main():
                     errors.append(f"{label}: missing fragment: {reference}")
 
     required = {
-        "index.html": ("Tunisia", "Solara", "solara.html", "Solarna Systems", "The MSc was not completed."),
-        "education.html": ("degree not completed", "not a completed master's thesis"),
+        "index.html": ("Tunisia", "Solara", "solara.html", "Solarna Systems", "The thesis project is in progress and the degree is not yet completed."),
+        "education.html": ("the thesis project is in progress", "the thesis manuscript and degree are not yet complete"),
         "solara.html": ("proprietary and in development", "source code is not publicly distributed", "development goal"),
     }
     for name, phrases in required.items():
@@ -106,7 +106,7 @@ def main():
             if phrase.lower() not in normalized:
                 errors.append(f"{name}: missing expected wording: {phrase}")
         if name == "education.html":
-            for stale in ("2024-present", "in progress", "current programme", "current thesis"):
+            for stale in ("2024-present", "current programme", "current thesis"):
                 if stale in normalized:
                     errors.append(f"{name}: outdated education wording: {stale}")
 

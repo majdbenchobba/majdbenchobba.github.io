@@ -8,7 +8,7 @@ Personal GitHub Pages portfolio for Majd Ben Chobba, an electrical engineer base
 - Solarna Systems: engineering business overview
 - BiasForge: a separate market-research and trading-workspace project
 - Selected public software repositories
-- Completed BSc Electrical Engineering and subsequent MSc studies (not completed)
+- Completed BSc Electrical Engineering and an ongoing MSc thesis project; the degree is not yet complete
 - Cynth V.1 bachelor's thesis and virtual synthesizer academic project
 - Media, music, and design portfolio links
 
