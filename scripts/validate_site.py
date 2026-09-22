@@ -94,7 +94,7 @@ def main():
     required = {
         "index.html": ("Tunisia", "Solara", "solara.html", "Solarna Systems", "SolarnaPV", "The MSc programme is currently paused", "the degree was not conferred"),
         "education.html": ("The programme is currently paused", "the MSc degree was not conferred", "No MSc thesis manuscript or PDF is publicly distributed"),
-        "solara.html": ("proprietary and in development", "source code is not publicly distributed", "development goal"),
+        "solara.html": ("proprietary and in development", "source code is not publicly distributed", "development goal", "https://usesolara.pages.dev/"),
     }
     for name, phrases in required.items():
         page = pages.get((ROOT / name).resolve())
